@@ -13,6 +13,42 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+}
+
+header {
+  background: #333;
+  color: #fff;
+  padding: 1rem;
+}
+
+nav {
+  background: #333;
+  color: #fff;
+  padding: 0.5rem;
+}
+
+main {
+  flex: 1;
+  padding: 1rem;
+  background: #f0f0f0;
+}
+
+footer {
+  background: #333;
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
+}
+
+p {
+  color: #333;
+}
+
 a {
   font-weight: 500;
   color: #646cff;
@@ -52,6 +88,17 @@ button:hover {
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
+}
+
+:focus-visible {
+  outline: 4px solid #0044cc;
+  outline-offset: 2px;
+}
+
+.layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 @media (prefers-color-scheme: light) {
