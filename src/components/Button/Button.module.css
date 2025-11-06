@@ -1,0 +1,36 @@
+.button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+  background-color: #007acc;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  text-align: center;
+  width: 100%;                
+  max-width: 300px;           
+  transition: background-color 0.2s ease;
+}
+
+/* keyboard and mouse hover */
+.button:hover,
+.button:focus-visible {
+  background-color: #005fa3;
+  outline: 3px solid #002f55; 
+  outline-offset: 2px;
+}
+
+/* high-contrast / prefers reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .button {
+    transition: none;
+  }
+}
+
+@media (min-width: 600px) {
+  .button {
+    width: auto;            
+  }
+}
