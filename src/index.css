@@ -36,6 +36,7 @@ main {
   flex: 1;
   padding: 1rem;
   background: #f0f0f0;
+  font-size: 2rem;
 }
 
 footer {
