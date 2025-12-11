@@ -1,0 +1,67 @@
+.wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.wrapper::-webkit-scrollbar {
+  height: 8px;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+.caption {
+  caption-side: top;
+  text-align: left;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.headerCell {
+  text-align: left;
+  padding: 0.5rem 0.75rem;
+  border-bottom: 2px solid #d1d5db;
+  background-color: #f3f4f6;
+  font-weight: 600;
+}
+
+.row:nth-child(even) .cell {
+  background-color: #f9fafb;
+}
+
+.row:hover .cell {
+  background-color: #edf2ff;
+}
+
+.cell {
+  padding: 0.5rem 0.75rem;
+  border-bottom: 1px solid #e5e7eb;
+  color: #111827;
+}
+
+.emptyCell {
+  padding: 0.75rem;
+  text-align: center;
+  color: #6b7280;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.cell:focus-visible,
+.headerCell:focus-visible {
+  outline: 3px solid #ffbf47;
+  outline-offset: 2px;
+}
+
+@media (max-width: 480px) {
+  .table {
+    font-size: 0.85rem;
+  }
+
+  .headerCell,
+  .cell {
+    padding: 0.4rem 0.5rem;
+  }
+}

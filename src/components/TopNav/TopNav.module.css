@@ -1,0 +1,68 @@
+.topNav {
+  padding: 0.75rem 1rem;
+  background-color: #333333;
+  color: #ffffff;
+  border-bottom: 1px solid #1f2933;
+}
+
+/* Left-aligned nav content */
+.topNavInner {
+  max-width: 100%;
+  margin: 0;
+}
+
+/* Horizontal list of nav items */
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: flex-start; /* ensure items align left in the row */
+}
+
+.item {
+  margin: 0;
+}
+
+/* Styled nav "buttons" */
+.navButton {
+  border: none;
+  border-radius: 999px;
+  padding: 0.4rem 0.9rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  font-family: inherit;
+
+  background-color: #4b5563;
+  color: #ffffff;
+
+  cursor: pointer;
+  transition: background-color 0.15s ease, transform 0.1s ease;
+}
+
+/* Hover and active states */
+.navButton:hover {
+  background-color: #6b7280;
+}
+
+.navButton:active {
+  transform: scale(0.97);
+}
+
+/* Keyboard focus visible */
+.navButton:focus-visible {
+  outline: 3px solid #ffbf47;
+  outline-offset: 2px;
+}
+
+/* Stack nav buttons vertically on small screens */
+@media (max-width: 600px) {
+  .list {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+}

@@ -1,0 +1,118 @@
+/* Toggle button on the left edge of the viewport */
+.toggleButton {
+  position: fixed;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1000;
+  background-color: #111827;
+  color: #ffffff;
+  border: none;
+  border-radius: 0 999px 999px 0;
+
+  /* doubled size */
+  padding: 1rem 0.7rem;   /* was 0.5rem 0.35rem */
+  cursor: pointer;
+  font-size: 2rem;        /* was 1rem */
+}
+
+.toggleButton span {
+  display: inline-block;
+}
+
+.toggleButton:hover {
+  background-color: #1f2933;
+}
+
+.toggleButton:focus-visible {
+  outline: 3px solid #ffbf47;
+  outline-offset: 2px;
+}
+
+/* Vertically centered slide-out panel */
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 50%;
+  width: max-content;            /* fit to content width */
+  max-width: 280px;              /* cap width */
+  max-height: 80vh;              /* cap height so it never overflows too far */
+  padding: 1rem;
+  background-color: rgba(243, 244, 246, 0.9); /* semi translucent */
+  backdrop-filter: blur(4px);    /* glassy effect */
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.15);
+  border-radius: 0.75rem;        /* round all corners of the popout */
+  z-index: 999;
+  transform: translate(-100%, -50%);  /* start off-screen, vertically centered */
+  transition: transform 0.2s ease-out;
+  overflow-y: auto;
+}
+
+.sidebarOpen {
+  transform: translate(0, -50%);      /* slide in while staying centered */
+}
+
+.sidebarClosed {
+  transform: translate(-100%, -50%);  /* slide out while staying centered */
+}
+
+.title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0 0 0.75rem 0;
+}
+
+.nav {
+  margin-bottom: 0.75rem;
+}
+
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.item + .item {
+  margin-top: 0.35rem;
+}
+
+.link {
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.375rem;
+  text-decoration: none;
+  color: #111827;
+  font-size: 0.95rem;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.link:hover {
+  background-color: #e5e7eb;
+}
+
+.link:focus-visible {
+  outline: 3px solid #ffbf47;
+  outline-offset: 2px;
+  background-color: #e6f0fa;
+}
+
+.link:visited {
+  color: #4b0082;
+}
+
+/* Rounded content box inside the sidebar */
+.extraContent {
+  margin-top: 0.75rem;
+  font-size: 0.9rem;
+  color: #4b5563;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 0.75rem;
+  border-radius: 0.75rem;        /* rounded inner content box */
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .sidebar {
+    transition: none;
+  }
+}
