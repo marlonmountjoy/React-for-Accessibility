@@ -1,10 +1,6 @@
 import React from "react";
 import styles from "./Table.module.css";
 
-/**
- * columns: [{ key: "id", header: "ID" }, { key: "name", header: "Name" }]
- * data: [{ id: 1, name: "Item 1" }, { id: 2, name: "Item 2" }]
- */
 export default function Table({
   caption,
   columns,
