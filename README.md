@@ -1,6 +1,6 @@
 # React for Accessibility
 
-This project is a small React app focused on building basic accessible components. It includes a SkipToContent link, Header, Top Navigation, Footer, and simple UI elements like Button, Label, TextBox, and Anchor. The goal is to create a minimal component library that follows good accessibility practices and is easy to understand.
+This project is a small React app focused on building basic accessible components. It includes a SkipToContent link, Header, Top Navigation, Sidebar, Footer, and simple UI elements like Button, Label, TextBox, Anchor Element and Table. The goal is to create a minimal component library that follows good accessibility practices, is reuseable and is easy to understand.
 
 ## Features
 
@@ -10,6 +10,8 @@ This project is a small React app focused on building basic accessible component
 - Accessible Label component tied to form inputs
 - TextBox input with clear styling and keyboard focus behavior
 - Anchor component with proper target and rel handling
+- Collapsible Sidebar with KO and SR support
+- Accessible first Table
 - Simple layout structure that keeps content readable
 
 ## Tech
@@ -36,7 +38,9 @@ Button/
 Footer/
 Header/
 Label/
+Sidebar/
 SkipToContent/
+Table/
 TextBox/
 TopNav/
 App.jsx
